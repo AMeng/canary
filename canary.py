@@ -15,7 +15,7 @@ HELP = {
     "BATCH_PATH": "Path to a JSON file with one or more commands to execute.",
     "PROCESS": "Run an executable and immediately terminate it.",
     "PROCESS_PATH": "Full path to the executable.",
-    "PROCESS_ARGS": "Optioanl arguments to pass to the executable.",
+    "PROCESS_ARGS": "Optional arguments to pass to the executable.",
     "FILE": "Perform actions on a file.",
     "FILE_ACTION": "Action to take on the file.",
     "FILE_PATH": "Path to the file.",
@@ -152,9 +152,9 @@ def execute(args):
     parser_process.add_argument("path", help=HELP["PROCESS_PATH"])
     parser_process.add_argument("-a", "--args", nargs=argparse.REMAINDER, help=HELP["PROCESS_ARGS"])
 
-    choices = ["create", "delete", "modify"]
     parser_file = subparsers.add_parser("file", description=HELP["FILE"])
-    parser_file.add_argument("action", choices=choices, help=HELP["FILE_ACTION"])
+    parser_file_actions = ["create", "delete", "modify"]
+    parser_file.add_argument("action", choices=parser_file_actions, help=HELP["FILE_ACTION"])
     parser_file.add_argument("path", help=HELP["FILE_PATH"])
 
     parser_network = subparsers.add_parser("network", description=HELP["NETWORK"])

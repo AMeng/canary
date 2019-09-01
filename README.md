@@ -22,7 +22,7 @@ Modify a file by updating its last modified date.
 ```
 
 #### Start a process
-Start a process and wait for it to exit.
+Run an executable and immediately terminate it.
 Takes optional `--args` to send to the executable.
 ```
 ./canary.py process /path/to/executable
