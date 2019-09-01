@@ -1,0 +1,12 @@
+[
+  {"command": "file", "action": "create", "path": "/tmp/test.txt"},
+  {"command": "file", "action": "delete", "path": "/tmp/test.txt"},
+  {"command": "file", "action": "modify", "path": "/tmp/test.txt"},
+  {"command": "process", "path": "ls"},
+  {"command": "process", "path": "ls", "args": "-l"},
+  {"command": "network", "host": "google.com", "port": "80"},
+  {"command": "network", "host": "google.com", "port": "80", "protocol": "tcp"},
+  {"command": "network", "host": "google.com", "port": "80", "protocol": "udp"},
+  {"command": "network", "host": "google.com", "port": "80", "protocol": "tcp", "data": "test"},
+  {"command": "network", "host": "google.com", "port": "80", "protocol": "udp", "data": "test"}
+]
