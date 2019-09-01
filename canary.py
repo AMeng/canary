@@ -9,6 +9,7 @@ import socket
 import subprocess
 import sys
 
+syntax error
 
 HELP = {
     "BATCH": "Execute a series of commands from a JSON file.",
