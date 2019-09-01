@@ -71,9 +71,6 @@ def handle_file(action, path):
             return {"status": "failure", "reason": f"file not found at {path}"}
         except PermissionError:
             return {"status": "failure", "reason": f"Permission denied deleting file at {path}"}
-    else:
-        raise ValueError("TODO")
-
     return {
         "status": "success",
         "timestamp": start_time,
